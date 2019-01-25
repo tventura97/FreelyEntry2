@@ -25,7 +25,7 @@ SECRET_KEY = 'thz#ms1gr*7f+-_nnqr*9oxnj@(!k7(wcmux5#++s&s_x)f7-x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', '*']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'feed',
     'users.apps.UsersConfig',
+    'messenger',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
