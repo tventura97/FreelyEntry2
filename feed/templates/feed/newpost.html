@@ -1,12 +1,11 @@
-<html>
-  <head>
-    <title>CP Blog</title>
-  </head>
-  <body>
-    <h1>Your Post</h1>
-    <h2>Number: {{number}} </h2>
-    <div>
-      {{Entry}}
-    </div>
-  </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<title>New Post</title>
+<h1>Your Post </h1>
+<h2>{{date}}</h2>
+<form method = 'POST'> {% csrf_token%}
+{{form.as_p}}
+<input type = 'submit' value = 'Save' />
+</form>
+
+{% endblock %}

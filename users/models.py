@@ -7,11 +7,14 @@ class FEUser(AbstractUser):
     first_name = models.CharField(('first name'), max_length=30, blank=True)
     last_name = models.CharField(('last name'), max_length=30, blank=True)
 
-    USERNAME_FIELD='email'
-    REQUIRED_FIELDS=[]
+    USERNAME_FIELD='username'
+    REQUIRED_FIELDS=['email']
 
     def getNumber(self):
         return self.number
 
     def getEmail(self):
         return self.email
+
+    def getFirstName(self):
+        return self.first_name
