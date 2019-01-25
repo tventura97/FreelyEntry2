@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>CP Blog</title>
+  </head>
+  <body>
+    <h1>Entries</h1>
+    <h2>Phone Number: {{number}} </h2>
+    {% for entry in entries %}
+      <div>
+        <h3>Date: {{ entry.created_at }}</h3>
+        <p>Entry: {{ entry.body|linebreaksbr }}</p>
+      </div>
+    {% endfor %}
+    <p><a href="{% url 'logout' %}">logout</a></p>
+    <p><a href="{% url 'newEntry' %}">New Post</a></p>
+  </body>
+</html>
